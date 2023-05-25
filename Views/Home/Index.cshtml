@@ -1,0 +1,35 @@
+﻿@model List<HomeVm>
+@{
+    ViewData["Title"] = "Home Page";
+    var list = Model;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.Address</td>
+            <td>
+                <a class="btn">Edit</a>
+            </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
